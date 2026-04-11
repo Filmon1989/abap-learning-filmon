@@ -34,6 +34,7 @@ CLASS zcl_861_local_class IMPLEMENTATION.
       LOOP AT connections INTO DATA(conn_ref).
      out->write( conn_ref->get_connection_string( ) ).
   ENDLOOP.
+  out->write( |Total objects created: { lcl_connection=>conn_counter }| ).
 
   ENDMETHOD.
 
