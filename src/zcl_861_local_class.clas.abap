@@ -16,19 +16,22 @@ CLASS zcl_861_local_class IMPLEMENTATION.
     DATA connection TYPE REF TO lcl_connection.
     DATA connections TYPE TABLE OF REF TO lcl_connection.
 
-    connection = NEW #( ).
-    connection->carrier_id = 'LH'.
-    connection->connection_id = '0400'.
+ connection = NEW #(
+  i_carrier_id = 'LH'
+  i_connection_id = '0400'
+  ).
     APPEND connection TO connections.
 
-    connection = NEW #( ).
-    connection->carrier_id = 'AA'.
-    connection->connection_id = '0017'.
-    APPEND connection TO connections.
+ connection = NEW #(
+  i_carrier_id = 'AA'
+  i_connection_id = '0017'
+ ).
+     APPEND connection TO connections.
 
-    connection = NEW #( ).
-    connection->carrier_id = 'SQ'.
-    connection->connection_id = '0001'.
+  connection = NEW #(
+  i_carrier_id = 'SQ'
+  i_connection_id = '0001'
+  ).
     APPEND connection TO connections.
 
       LOOP AT connections INTO DATA(conn_ref).
