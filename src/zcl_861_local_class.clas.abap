@@ -31,6 +31,10 @@ CLASS zcl_861_local_class IMPLEMENTATION.
     connection->connection_id = '0001'.
     APPEND connection TO connections.
 
+      LOOP AT connections INTO DATA(conn_ref).
+     out->write( conn_ref->get_connection_string( ) ).
+  ENDLOOP.
+
   ENDMETHOD.
 
 ENDCLASS.
