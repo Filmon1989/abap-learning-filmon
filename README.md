@@ -1,2 +1,2 @@
 # abap-learning-filmon
-This is ABAP Basic training
+This is Basic ABAP training from SAP
